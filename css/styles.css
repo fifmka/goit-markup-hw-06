@@ -43,6 +43,7 @@ button {
     font-family: inherit;
     padding: 0;
     margin: 0;
+    cursor: pointer;
 }
 
 img {
@@ -726,6 +727,15 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     border-radius: 50%;
     border: 1px solid #0000001A;
     background-color: var(--white-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button:hover,
+.modal-button:focus {
+    color: var(--accent-color);
+
+}
+.modal-svg{
+    fill: currentColor;
 }
 .order-form{
     width: 528px;
@@ -738,12 +748,30 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     border-radius: 4px;
     width: 100%;
     height: 100%;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.order-form input:hover,
+.order-form input:focus
+
+{
+    border: 1px solid var(--accent-color);}
+.icon{
+    fill: currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+.field:hover + .icon{
+color: var(--accent-color)}
+.field:focus +.icon {
+    color: var(--accent-color)
 }
 .display{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
+
 .order-form .field{
     height: 40px;
 }
@@ -859,8 +887,6 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     z-index: 10;
     background-color: #2196F3;
     opacity: 0;
-
-
 }
 .checkbox-icon{
     position: absolute;
@@ -869,7 +895,6 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     width: 100%;
     height: 100%;
     opacity: 1;
-
 }
 
 .checkbox-link{
