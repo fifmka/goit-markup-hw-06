@@ -414,22 +414,39 @@
             </button>
             <form class="order-form" name="order-form" autocomplete="on">
                 <h2 class="order-title">Залиште свої дані, ми вам передзвонимо</h2>
-                <label class="order-name display">Ім'я
-                    <input class="field-name" type="text" name="user-name">
+                <label class="order-name display"><span class="order-word">Ім'я</span>
+                    <input class="field-name field" type="text" name="user-name">
+                    <svg class="icon-name" width="18" height="18">
+                        <use href="./images/icons.svg#icon-person"></use>
+                    </svg>
                 </label>
-                <label class="order-tel display">Телефон
-                    <input class="field-name" type="tel" name="tel">
+                <label class="order-tel display"><span class="order-word">Телефон</span>
+                    <svg class="icon-tel" width="18" height="18">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                    <input class="field-tel field" type="tel" name="tel">
                 </label>
-                <label class="order-mail display">Пошта
-                    <input class="field-mail" type="email" name="mail">
+                <label class="order-mail display"><span class="order-word">Пошта</span>
+                    <svg class="icon-mail" width="18" height="18">
+                        <use href="./images/icons.svg#icon-email-black"></use>
+                    </svg>
+                    <input class="field-mail field" type="email" name="mail">
                 </label>
-                <label class="order-comment display">Коментар
-                    <input class="field-comment" type="textarea" name="comment"placeholder="Введіть текст">
+                <label class="order-comment display"><span class="order-word">Коментар</span>
+                    <textarea class="field-comment" name="comment" placeholder="Введіть текст"></textarea>
                 </label>
-                <input type="checkbox" name="contract" id="contract">
-                <label for="contract">Погоджуюся з розсилкою та приймаю
-                    <a href="#">Умови договору</a>
-                </label>
+                <label class="order-contract">
+                    <span class="contract-form">
+                        <input class="contract-checkbox visually-hidden" type="checkbox" name="contract">
+                        <svg class="checkbox-icon default" width="16" height="15">
+                            <use href="./images/icons.svg#icon-checkbox"></use>
+                        </svg>
+                        <svg class="checked-box active" width="16" height="15">
+                            <use href="./images/icons.svg#icon-Vector"></use>
+                        </svg>
+                    </span>
+                    Погоджуюся з розсилкою та приймаю <a class="contract-link" href="#">Умови договору</a>
+                    </label>
                 <button class="button-send" type="submit">Відправити</button>
             </form>
         </div>

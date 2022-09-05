@@ -234,10 +234,12 @@ body {
     line-height: 1.86;
     text-align: center;
     letter-spacing: 0.06em;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:focus{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 /* Секції Загальні налаштування*/
@@ -565,10 +567,11 @@ padding-top: 0;
     background-color: var(--accent-color);
     color: var(--white-text-color);
 
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sing-button:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 
@@ -703,23 +706,20 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     
     min-width: 528px;
     min-height: 581px;
-    padding-bottom: 40px;
 
-
-    
     background-color: var(--white-text-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
 .modal-button{
+    position: absolute;
+    right: 0;
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
     margin-top: 8px;
     margin-right: 8px;
-    margin-bottom: 2px;
-
 
     width: 30px;
     height: 30px;
@@ -729,21 +729,127 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 }
 .order-form{
     width: 528px;
-    margin: auto;
-    padding-bottom: 40px;
-    padding-right: 44.5px;
-    padding-left: 35.5px;
+   padding: 40px;
 }
 .order-form input{
     margin: 0;
-    padding: 12px;
+    padding-left: 35px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
 }
 .display{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
-.order-comment.display{
+.order-form .field{
+    height: 40px;
+}
+.order-comment{
     margin-bottom: 20px;
 }
+.order-word{
+    margin-bottom: 4px;
 
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+.field-comment{
+    resize:none;
+    height: 120px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.field-comment::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.order-contract{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    line-height: 1.71;
+    color: var(--paragraph-color);
+}
+.contract-link{
+    line-height: 1.71;
+    text-decoration-line: underline;
+    color: var(--accent-color);
+
+}
+.button-send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+   
+    min-width: 200px;
+    min-height: 50px;
+
+    border: none;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--white-text-color);
+    
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-send:focus{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
+}
+.order-name{
+    position: relative;
+}
+.icon-name{
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+}
+.order-tel{
+    position: relative;
+}
+.icon-tel{
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+}
+.order-mail{
+    position: relative;
+}
+.icon-mail{
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+}
+.contract-form{
+    position: relative;
+}
+.checked-box{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+.checkbox-icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+.checked-box.active{
+    display: none;
+}
